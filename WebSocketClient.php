@@ -4,10 +4,10 @@ class WebSocketClient {
 		$ID,
 		$Headers	= null,
 		$Handshake	= null,
-		$timeCreated= null;
+		$timeCreated	= null;
 	
 	function __construct($Socket){
-		$this->ID			= intval($Socket);
+		$this->ID		= intval($Socket);
 		$this->timeCreated	= time();
 	}
 }
