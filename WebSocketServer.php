@@ -2,32 +2,19 @@
 // WebSocketServer implementation in PHP
 // by Bryan Bliewert, nVentis@GitHub
 
-class WebSocketClient {
-	// get according socket in WebSocketServer using $this->Sockets[$Client->ID]
-	public
-		$ID,
-		$Headers	= null,
-		$Handshake	= null,
-		$timeCreated= null;
-	
-	function __construct($Socket){
-		$this->ID			= intval($Socket);
-		$this->timeCreated	= time();
-	}
-}
 
 class WebSocketServer {
 	public
-		$logToFile		= false,
-			$logFile	= "log.txt",
+		$logToFile	= false,
+		$logFile	= "log.txt",
 		$logToDisplay	= true,
-		$Sockets		= array(),
+		$Sockets	= array(),
 		$bufferLength	= 2048,
-		$maxClients		= 20,
+		$maxClients	= 20,
 		
 		// applied with Start()
 		$errorReport	= E_ALL,
-		$timeLimit		= 0,
+		$timeLimit	= 0,
 		$implicitFlush	= true;
 	
 	protected
